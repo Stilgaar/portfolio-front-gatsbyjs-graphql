@@ -5,6 +5,7 @@ import * as styles from '../../styles/project.module.css'
 import Img from "gatsby-image"
 
 function Project({ data }) {
+
   const pro = data.allMarkdownRemark.nodes
   const contact = data.site.siteMetadata.contact
 
@@ -20,6 +21,8 @@ function Project({ data }) {
                <Img fluid={pros?.frontmatter?.thumbs?.childImageSharp?.fluid}/> 
                <h4>{pros?.frontmatter?.title}</h4>
                <p>Stack : {pros?.frontmatter?.stack}</p>
+               <p> {pros?.frontmatter?.repofront && <a href={pros?.frontmatter?.repofront}> Github (Front)</a> } 
+               <br/> {pros?.frontmatter?.repoback && <a href={pros?.frontmatter?.repoback}> Github (Back)</a> }</p>
             </div>
        </Link>))}
        </div>
@@ -39,6 +42,8 @@ query MyQuery {
         title
         stack
         slug
+        repofront
+        repoback
         thumbs {
           childImageSharp {
             fluid {
