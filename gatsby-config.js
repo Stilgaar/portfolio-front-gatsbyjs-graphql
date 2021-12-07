@@ -10,11 +10,23 @@ module.exports = {
     `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
      `gatsby-plugin-sharp`,
+     { 
+       resolve: `gatsby-source-mongodb`,
+       options: { dbName: `test`, collection: [`messages`] },
+       server: `mongodb://localhost:27017/test`
+    },
   {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `projects`,
-        path: `${__dirname}/src/projects/`,
+        path: `${__dirname}/src/MD-projects/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `competences`,
+        path: `${__dirname}/src/MD-competences/`,
       },
     },
         {

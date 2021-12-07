@@ -1,1 +1,0 @@
-exports.onPreInit = () => console.log("******************************\nLoaded gatsby-starter-plugin\n******************************")

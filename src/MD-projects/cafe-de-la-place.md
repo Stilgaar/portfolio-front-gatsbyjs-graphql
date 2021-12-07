@@ -1,7 +1,7 @@
 ---
 title: Café de la place
 stack: React.js - HTML - CSS
-slug: cafe-de-la-place-react
+slug: https://cafedelaplace.osc-fr1.scalingo.io/
 date: 2021-10-10T00:00+00:00
-thumb: ../images/img/cafe.jpg
+thumbs: ../images/img/cafe.jpg
 ---

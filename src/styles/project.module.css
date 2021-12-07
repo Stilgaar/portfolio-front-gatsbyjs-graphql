@@ -7,14 +7,31 @@
   margin-top: 80px;
   }
   
-.portfolio > h3 {
+.portfolio h3 {
   font-size: 2em;
-  font-weight: 400;
+  font-weight: 700;
   }
+
+.portfolio form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 40%;
+  margin: auto;
+}
+
+.portfolio form label {
+  text-align: left;
+  margin-bottom: 0.7%;
+}
+.portfolio form input {
+  margin-bottom: 2%;
+}
 
 .projet {
   display: flex;
   justify-content: space-evenly;
+  flex-direction: row;
   width: 80%;
   margin: auto;
 }
@@ -24,7 +41,40 @@
   height: 20%;
 }
 
+.element {
+  display: flex;
+  flex-direction: column;
+  margin: auto; 
+  margin-bottom: 0.5%;
+  padding-bottom: 0.3%;
+  width: 80%;
+}
 
+.textes {
+  display: flex;
+  justify-content: space-evenly;
+  width: 80%;
+  margin: auto;
+}
+
+.textes p {
+  margin-right: 1%;
+  margin-left: 1%;
+}
+
+.image {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: auto; 
+}
+
+.image img {
+  width: 5%;
+  height: 5%;
+  margin-right: 2%;
+  margin-left: 2%;
+}
 
 .projet div {
   padding:3%;
@@ -32,4 +82,29 @@
 
 .portfolio input {
   color: black; 
+}
+
+@media (max-width: 1000px) {
+  .projet {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin:auto;
+  }
+  .images {
+    margin:auto;
+    width: 80%;
+    height: 80%;
+  }
+  .textes {
+    flex-direction: column;
+    margin-top: 0;
+    margin-bottom: 0;
+    justify-content: none;
+    height: min-content;
+  }
+  .textes p{
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
