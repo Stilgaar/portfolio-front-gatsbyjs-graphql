@@ -1,6 +1,6 @@
 import React from "react"
 import Navbar from "./Navbar"
-import '../Styles/global.css'
+import '../styles/global.css'
 import { graphql, useStaticQuery } from "gatsby";
 
 

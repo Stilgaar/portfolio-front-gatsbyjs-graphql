@@ -1,27 +1,19 @@
 import React from "react";
 import Layout from "../components/Layout";
-import * as styles from '../Styles/project.module.css'
+import * as styles from '../styles/project.module.css'
 import { useState } from 'react';
-const axios = ('axios') 
+const axios = require('axios')
 
 function Contact() {
 
     const [sumbit, setSumbit] = useState({ noms: "", email: "", title: "", message: "" })
     const [ok, setOk] = useState(false)       
+
     const handleSubmit =  () => {
-    const query = JSON.stringify({
-        mutation: `
-         Mutation($message: String, $title: String, $email: String, $noms: String) {
-            NewMessage(message: ${sumbit.message}, title: ${sumbit.title}, email: ${sumbit.email}, noms: ${sumbit.noms}) {
-                noms
-                email
-                title
-                message
-                id
-            }
-          }`                    
-    });
-    axios('http://localhost:5000/graphql', query ).then((res) => console.log("TES", res))
+    const query = { mutation: ` Mutation($message: String, $title: String, $email: String, $noms: String) { NewMessage(message: ${sumbit.message}, title: ${sumbit.title}, email: ${sumbit.email}, noms: ${sumbit.noms}) {noms email title message id } }`};
+
+    console.log(query)
+    axios.post('http://localhost:5000/graphql', query ).then((res) => console.log("TES", res))
 
  }
 
