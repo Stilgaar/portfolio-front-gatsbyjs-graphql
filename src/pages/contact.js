@@ -59,7 +59,7 @@ function Contact() {
                 <h2>Coordonnées</h2>
                 <p>Jean-François van Straelen <br/>
                     8 Allée des Jasmins, 06130 Grasse <br/>
-                    06 63 87 77 90 <br/>
+                    06 63 87 77 90 <br/>    
                     jeffvanstraelen@gmail.com</p>
 
             </div>
